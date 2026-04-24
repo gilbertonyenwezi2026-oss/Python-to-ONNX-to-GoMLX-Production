@@ -1,0 +1,17 @@
+{
+  "model": "StandardScaler + LogisticRegression",
+  "test_rows": 100000,
+  "features": [
+    "line_speed",
+    "temperature",
+    "humidity",
+    "pressure",
+    "operator_experience",
+    "material_age",
+    "shift_load",
+    "sensor_noise"
+  ],
+  "python_seconds": 0.005476900005305652,
+  "python_rows_per_second": 18258503.880502973,
+  "accuracy": 0.85678
+}

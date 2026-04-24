@@ -1,0 +1,1 @@
+User requested a project solving a startup management problem: train a Python ML model, export to ONNX, and compare Go production inference. AI assistance was used to design the repository structure, write starter code, draft README documentation, and frame the consultant recommendation. No paid AI services were required.

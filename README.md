@@ -62,12 +62,14 @@ Expected GoMLX flow:
 After running both sides, update this table:
 
 | Runtime               | Test Rows | Execution Time | Rows/Second | Accuracy |
+|---|---:|---:|---:|---:|
 | Python / Scikit-Learn | 100,000   | 0.005618 sec   | 17,800,246 | 0.85678   |
 | Go validation runner  | 100,000   | 0.008938 sec   | 11,188,686 | N/A       |
 
 
 
 | Runtime               | Rows    | Execution time                    | Rows/sec | Match rate vs Python |
+|---|---:|---:|---:|---:|
 | Python / Scikit-Learn | 100,000 | see `results/python_metrics.json` | see JSON | baseline             |
 | Go / GoMLX ONNX       | 100,000 | see `results/go_metrics.json`     | see JSON | target: 99.9–100%     |
 

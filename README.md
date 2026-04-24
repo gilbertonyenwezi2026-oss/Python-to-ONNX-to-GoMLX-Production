@@ -74,9 +74,19 @@ After running both sides, update this table:
 | Go / GoMLX ONNX       | 100,000 | see `results/go_metrics.json`     | see JSON | target: 99.9–100%     |
 
 ## Consultant recommendation
-Python remains the best environment for experimentation, model training, and analyst productivity. ONNX provides the portability layer for moving trained models into production runtimes. Go is attractive for production because it offers simple deployment, fast startup, compiled binaries, and strong concurrency for thousands of requests. The recommended architecture is: train in Python, export to ONNX, validate numerical equivalence, and deploy the Go executable behind an API service.
+Python continues to be the optimal environment for experimentation, model training, and enhancing analyst productivity. ONNX offers a portability layer for transferring learned models into production environments. Go is appealing for production due to its straightforward deployment, rapid startup, generated binaries, and robust concurrency capabilities for handling thousands of requests. The suggested architecture entails training in Python, exporting to ONNX, validating numerical equivalence, and deploying the Go executable behind an API service.
 
 ## References
 - ONNX supported tools documentation.
 - GoMLX GitHub documentation.
 - ONNX-GoMLX GitHub documentation.
+
+## Author
+Gilbert Onyenwezi
+
+MSDS 431 - GO & AI Programming
+- Northwestern University
+- School of Professional Studies
+- Masters in Data Science - Data Engineering Specialization
+- 2026
+

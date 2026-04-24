@@ -24,7 +24,7 @@ cd onnx-gomlx-startup
 python -m venv .venv
 source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r python/requirements.txt
-python python/train_export.py
+python python/train_export_onnx.py
 ```
 
 Outputs:
@@ -61,10 +61,15 @@ Expected GoMLX flow:
 ## Benchmark table
 After running both sides, update this table:
 
-| Runtime | Rows | Execution time | Rows/sec | Match rate vs Python |
-|---|---:|---:|---:|---:|
-| Python / Scikit-Learn | 100,000 | see `results/python_metrics.json` | see JSON | baseline |
-| Go / GoMLX ONNX | 100,000 | see `results/go_metrics.json` | see JSON | target: 99.9–100% |
+| Runtime               | Test Rows | Execution Time | Rows/Second | Accuracy |
+| Python / Scikit-Learn | 100,000   | 0.005618 sec   | 17,800,246 | 0.85678   |
+| Go validation runner  | 100,000   | 0.008938 sec   | 11,188,686 | N/A       |
+
+
+
+| Runtime               | Rows    | Execution time                    | Rows/sec | Match rate vs Python |
+| Python / Scikit-Learn | 100,000 | see `results/python_metrics.json` | see JSON | baseline             |
+| Go / GoMLX ONNX       | 100,000 | see `results/go_metrics.json`     | see JSON | target: 99.9–100%     |
 
 ## Consultant recommendation
 Python remains the best environment for experimentation, model training, and analyst productivity. ONNX provides the portability layer for moving trained models into production runtimes. Go is attractive for production because it offers simple deployment, fast startup, compiled binaries, and strong concurrency for thousands of requests. The recommended architecture is: train in Python, export to ONNX, validate numerical equivalence, and deploy the Go executable behind an API service.
